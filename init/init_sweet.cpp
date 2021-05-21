@@ -107,15 +107,6 @@ static const char *snet_prop_key[] = {
     NULL
 };
 
- static void workaround_snet_properties() {
-
-     // Hide all sensitive props
-    for (int i = 0; snet_prop_key[i]; ++i) {
-        property_override(snet_prop_key[i], snet_prop_value[i]);
-    }
-
-}
-
 void load_dalvik_properties() {
     struct sysinfo sys;
 
@@ -175,11 +166,6 @@ void vendor_load_properties() {
                 mod_device = "sweetin_in_global";
             }
         }
-
-    // SafetyNet workaround
-    fingerprint = "Xiaomi/dipper/dipper:8.1.0/OPM1.171019.011/V9.5.5.0.OEAMIFA:user/release-keys";
-    description = "dipper-user 8.1.0 OPM1.171019.011 V9.5.5.0.OEAMIFA release-keys";
-    workaround_snet_properties();
 
     set_ro_build_prop("fingerprint", fingerprint);
     set_ro_product_prop("device", device);
