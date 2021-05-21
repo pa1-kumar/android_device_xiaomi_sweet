@@ -72,10 +72,6 @@ PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.manager@1.0
 
-# Init
-PRODUCT_PACKAGES += \
-    init.qcom.rc
-
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/gpio-keys.kl \
@@ -137,3 +133,24 @@ TARGET_USES_MKE2FS := true
 -include $(LOCAL_PATH)/system_prop.mk
 
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
+
+# QTI Common
+TARGET_BOARD_PLATFORM := sm6150
+TARGET_COMMON_QTI_COMPONENTS += \
+    audio \
+    adreno \
+    av \
+    bt \
+    display \
+    gps \
+    media \
+    perf \
+    telephony \
+    nq-nfc \
+    usb \
+    init \
+    vibrator \
+    wlan \
+    wfd \
+    secomp \
+    overlay
