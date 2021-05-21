@@ -92,10 +92,7 @@ PRODUCT_PACKAGES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-
-# rro_overlays
-PRODUCT_PACKAGES += \
-    WifiOverlay
+    $(LOCAL_PATH)/overlay-pa \
 
 # Overlays -- Override vendor ones
 PRODUCT_PACKAGES += \
