@@ -42,10 +42,6 @@ PRODUCT_PACKAGES += \
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
-# Camera
-PRODUCT_PACKAGES += \
-    Snap
-
 # Device Settings
 PRODUCT_PACKAGES += \
     XiaomiParts
@@ -115,6 +111,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
 
+# Platform
+TARGET_BOARD_PLATFORM := sm6150
+
 # Perf
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.0
@@ -136,29 +135,5 @@ TARGET_USES_MKE2FS := true
 # Properties
 -include $(LOCAL_PATH)/product_prop.mk
 -include $(LOCAL_PATH)/system_prop.mk
+
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
-
-# Telephony
-PRODUCT_PACKAGES += \
-    ims-ext-common \
-    ims_ext_common.xml \
-    qti-telephony-hidl-wrapper \
-    qti_telephony_hidl_wrapper.xml \
-    qti-telephony-utils \
-    qti_telephony_utils.xml \
-    telephony-ext
-
-PRODUCT_BOOT_JARS += \
-    telephony-ext
-
-# WiFi Display
-PRODUCT_PACKAGES += \
-    libdisplayconfig.qti \
-    libnl \
-    libqdMetaData \
-    libavservices_minijail \
-    libavservices_minijail_32 \
-    vendor.display.config@2.0
-
-PRODUCT_BOOT_JARS += \
-    WfdCommon
