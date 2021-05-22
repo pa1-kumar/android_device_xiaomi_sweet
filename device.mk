@@ -104,12 +104,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
 
+# ParanoidDoze
+PRODUCT_PACKAGES += \
+    ParanoidDoze
+
 # Platform
 TARGET_BOARD_PLATFORM := sm6150
 
 # Perf
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.perf@2.0
+    vendor.qti.hardware.perf@2.2
 
 # Power
 PRODUCT_PACKAGES += \
