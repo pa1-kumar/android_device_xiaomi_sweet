@@ -147,7 +147,6 @@ TARGET_COMMON_QTI_COMPONENTS += \
     media \
     perf \
     telephony \
-    nq-nfc \
     usb \
     init \
     vibrator \
