@@ -150,7 +150,6 @@ TARGET_COMMON_QTI_COMPONENTS += \
     usb \
     init \
     vibrator \
-    wlan \
     wfd \
     secomp \
     overlay
